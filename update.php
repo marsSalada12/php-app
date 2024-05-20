@@ -27,10 +27,10 @@
                 mysqli_stmt_bind_param($stmt, 'ds', $Price, $ProductName);
                 mysqli_stmt_execute($stmt);
                 if (mysqli_stmt_affected_rows($stmt) == 0) {
-                    echo "<h2>Product \"$ProductName\" was not found in the catalog.</h2>";
+                    echo "<h2>El producto \"$ProductName\" no fue encontrado en el catalago</h2>";
                 }
                 else {
-                    echo "<h2>Price of the product \"$ProductName\" has been successfully updated to USD $Price.</h2>";
+                    echo "<h2>El precio del producto \"$ProductName\" ha sido actualizado a $Price</h2>";
                 }
                 mysqli_stmt_close($stmt);
                 
@@ -43,22 +43,22 @@
 
     ?>
 
-    <h2>Update a Product</h2>
+    <h2>Actualizar un producto</h2>
     <br>
 
     <form method="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <table>
             <tr>
-                <td class="no-border"> <label for="ProductName">Product Name</label> </td>
+                <td class="no-border"> <label for="ProductName">Nombre del producto</label> </td>
                 <td class="no-border"> <input type="text" name="ProductName" id="ProductName"> </td>
             </tr>
             <tr>
-                <td class="no-border"> <label for="Price">Updated Price (USD)</label> </td>
+                <td class="no-border"> <label for="Price">Precio (MXN)</label> </td>
                 <td class="no-border"> <input type="text" name="Price" id="Price"> </td>
             </tr>
         </table> 
         <br><br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Actualizar">
     </form>
 
     <?php
@@ -69,9 +69,9 @@
     <br> <br> <br>
     <table>
         <tr>
-            <td> <a href="update.php">Update another Product</a> </td>
-            <td> <a href="read.php">View Catalog</a> </td>
-            <td> <a href="index.php">Back to Home Page</a> </td>
+            <td> <a href="update.php">Actualizar otro producto</a> </td>
+            <td> <a href="read.php">Ver catalago</a> </td>
+            <td> <a href="index.php">Volver a la pagina de inicio</a> </td>
         </tr>
     </table>
 

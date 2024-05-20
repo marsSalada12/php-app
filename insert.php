@@ -32,10 +32,10 @@
             mysqli_stmt_bind_param($stmt, 'sd', $ProductName, $Price);
             mysqli_stmt_execute($stmt);
             if (mysqli_stmt_affected_rows($stmt) == 0) {
-                echo "<h2>Catalog update failed.</h2>";
+                echo "<h2>Actualizacion de catalago fallida</h2>";
             }
             else {
-                echo "<h2>Product \"$ProductName\" has been successfully added.</h2>";
+                echo "<h2>El producto \"$ProductName\" ha sido añadido</h2>";
             }
             mysqli_stmt_close($stmt);
             
@@ -48,22 +48,22 @@
 
     ?>
 
-    <h2>Add a Product</h2>
+    <h2>Agregar un producto</h2>
     <br>
 
     <form method="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <table>
             <tr>
-                <td class="no-border"> <label for="ProductName">Product Name</label> </td>
+                <td class="no-border"> <label for="ProductName">Nombre del producto</label> </td>
                 <td class="no-border"> <input type="text" name="ProductName" id="ProductName"> </td>
             </tr>
             <tr>
-                <td class="no-border"> <label for="Price">Price (USD)</label> </td>
+                <td class="no-border"> <label for="Price">Precio (MXN)</label> </td>
                 <td class="no-border"> <input type="text" name="Price" id="Price"> </td>
             </tr>
         </table>      
         <br><br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit"  value="Enviar">
     </form>
 
     <?php
@@ -73,9 +73,9 @@
     <br> <br> <br>
     <table>
         <tr>
-            <td> <a href="insert.php">Add Another Product</a> </td>
-            <td> <a href="read.php">View Catalog</a> </td>
-            <td> <a href="index.php">Back to Home Page</a> </td>
+            <td> <a href="insert.php">Agregar otro producto</a> </td>
+            <td> <a href="read.php">Ver catalago</a> </td>
+            <td> <a href="index.php">Volver a pagina de inicio</a> </td>
         </tr>
     </table>
 
