@@ -18,16 +18,16 @@
     $res = mysqli_query($conn, "SHOW TABLES LIKE 'Products'");
 
     if (mysqli_num_rows($res) <= 0) {
-        echo "<h2>Catalog is empty</h2>";
+        echo "<h2>El catalago de productos esta vacio</h2>";
     } else {
         //Query and print data
         $res = mysqli_query($conn, 'SELECT * FROM Products');
 
         if (mysqli_num_rows($res) <= 0) {
-            echo "<h2>Catalog is empty.</h2>";
+            echo "<h2>El catalago de productos esta vacio</h2>";
         }
         else {
-            echo "<table> <tr align=\"left\"> <th> Product Name </th> <th> Price (USD) </th> </tr>";
+            echo "<table> <tr align=\"left\"> <th> Nombre del producto</th> <th> Precio (MXN) </th> </tr>";
             while ($row = mysqli_fetch_assoc($res)) {
                 echo "<tr align=\"left\"> <td> ".$row["ProductName"]." </td>";
                 echo "<td> ".$row["Price"]." </td> </tr>";
@@ -45,10 +45,10 @@
 
     <table>
         <tr>
-            <td> <a href="insert.php">Add a Product</a> </td>
-            <td> <a href="update.php">Update a Product</a> </td>
-            <td> <a href="delete.php">Remove a Product</a> </td>
-            <td> <a href="index.php">Back to Home Page</a> </td>
+            <td> <a href="insert.php">Agregar un producto</a> </td>
+            <td> <a href="update.php">Actualizar un producto</a> </td>
+            <td> <a href="delete.php">Remover un producto</a> </td>
+            <td> <a href="index.php">Voler a la pagina de inicio</a> </td>
         </tr>
     </table>
     
