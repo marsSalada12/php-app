@@ -27,10 +27,10 @@
                 mysqli_stmt_bind_param($stmt, 'ds', $Price, $ProductName);
                 mysqli_stmt_execute($stmt);
                 if (mysqli_stmt_affected_rows($stmt) == 0) {
-                    echo "<h2>El producto \"$ProductName\" no fue encontrado en el catalago</h2>";
+                    echo "<h2>El Alumno \"$ProductName\" no fue encontrado en la lista</h2>";
                 }
                 else {
-                    echo "<h2>El precio del producto \"$ProductName\" ha sido actualizado a $Price</h2>";
+                    echo "<h2>La calificación del alumno \"$ProductName\" ha sido actualizado a $Price</h2>";
                 }
                 mysqli_stmt_close($stmt);
                 
@@ -49,11 +49,11 @@
     <form method="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <table>
             <tr>
-                <td class="no-border"> <label for="ProductName">Nombre del producto</label> </td>
+                <td class="no-border"> <label for="ProductName">Nombre del Alumno</label> </td>
                 <td class="no-border"> <input type="text" name="ProductName" id="ProductName"> </td>
             </tr>
             <tr>
-                <td class="no-border"> <label for="Price">Precio (MXN)</label> </td>
+                <td class="no-border"> <label for="Price">Calificación</label> </td>
                 <td class="no-border"> <input type="text" name="Price" id="Price"> </td>
             </tr>
         </table> 
@@ -69,8 +69,8 @@
     <br> <br> <br>
     <table>
         <tr>
-            <td> <a href="update.php">Actualizar otro producto</a> </td>
-            <td> <a href="read.php">Ver catalago</a> </td>
+            <td> <a href="update.php">Actualizar otro alumno</a> </td>
+            <td> <a href="read.php">Ver lista</a> </td>
             <td> <a href="index.php">Volver a la pagina de inicio</a> </td>
         </tr>
     </table>

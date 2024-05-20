@@ -17,7 +17,7 @@
         //Test if table exists
         $res = mysqli_query($conn, "SHOW TABLES LIKE 'Products'");
         if (mysqli_num_rows($res) <= 0) {
-            echo "<h2>El catalago de productos esta vacio</h2>";
+            echo "<h2>La lista de alumnos esta vacía</h2>";
         } else { 
 
             //Delete data
@@ -27,10 +27,10 @@
                 mysqli_stmt_bind_param($stmt, 's', $ProductName);
                 mysqli_stmt_execute($stmt);
                 if (mysqli_stmt_affected_rows($stmt) == 0) {
-                    echo "<h2>El producto \"$ProductName\" no fue encontrado en el catalago.</h2>";
+                    echo "<h2>El alumno \"$ProductName\" no fue encontrado en la lista.</h2>";
                 }
                 else {
-                    echo "<h2>El producto \"$ProductName\" ha sido removido del catalago.</h2>";
+                    echo "<h2>El alumno \"$ProductName\" ha sido removido de la lista.</h2>";
                 }
 
                 mysqli_stmt_close($stmt);
@@ -52,7 +52,7 @@
 
         <table>
             <tr>
-                <td class="no-border"> <label for="ProductName">Nombre del producto</label> </td>
+                <td class="no-border"> <label for="ProductName">Nombre del alumno</label> </td>
                 <td class="no-border"> <input type="text" name="ProductName" id="ProductName"> </td>
             </tr>
         </table>
