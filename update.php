@@ -17,7 +17,7 @@
         //Test if table exists
         $res = mysqli_query($conn, "SHOW TABLES LIKE 'Products'");
         if (mysqli_num_rows($res) <= 0) {
-            echo "<h2>Catalog is empty</h2>";
+            echo "<h2>La lista de alumnos esta vacía</h2>";
         } else {
             //Update data
             $ProductName = $_POST['ProductName'];
@@ -43,7 +43,7 @@
 
     ?>
 
-    <h2>Actualizar un producto</h2>
+    <h2>Actualizar un alumno</h2>
     <br>
 
     <form method="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">

@@ -67,8 +67,8 @@
     <br> <br> <br>
     <table>
         <tr>
-            <td> <a href="delete.php">Remover otro producto</a> </td>
-            <td> <a href="read.php">Ver catalago</a> </td>
+            <td> <a href="delete.php">Remover otro alumno</a> </td>
+            <td> <a href="read.php">Ver lista</a> </td>
             <td> <a href="index.php">Volver a la pagina de inicio</a> </td>
         </tr>
     </table>
