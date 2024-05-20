@@ -11,5 +11,7 @@
 <body>
 	<div class="center-align"> 
 		<h1>Catalago de producto</h1>
+		<p>Cristopher Dered Urbina Alonso - 19051223</p>
+		<p>Computo en la nube</p>
 		<br>
 	</div>
